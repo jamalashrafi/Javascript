@@ -1,0 +1,69 @@
+const Anagram = (str1, str2) => {
+  
+  let result = sortedString(str1) === sortedString(str2);
+  return result;
+}
+
+const sortedString = str => {
+  let newStr = str.toLowerCase().
+  replace(',"",\,/,@,^', '').
+  split('').
+  sort().
+  join();
+  return newStr;
+}
+
+
+console.log(Anagram('test', 'Festjhgug@'));
+//----------------------------------------------------------
+const array = "aaJamaal";
+let sortedString = array.split('').reverse().join('');
+console.log(sortedString);
+//----------------------------------------------------------
+Remove Duplicates
+const array = ['a', 'b', 'c', 'a', 'd'];
+let sortedArray = [ ...new Set(array)];
+console.log(sortedArray);
+----------------------------------------------------------
+const array = ['a', 'b', 'c', 'a', 'd'];
+let sortedArray = array.filter((itm, itr) => array.indexOf(itm) === itr );
+console.log(sortedArray);
+----------------------------------------------------------
+const array = ['a', 'b', 'c', 'a', 'd', 'c'];
+let sortedArray = [];
+
+array.forEach(itm => {
+  if(sortedArray.indexOf(itm) === -1)
+    sortedArray.push(itm);
+})
+console.log(sortedArray);
+//--------------------------------------------------------
+Find Duplicates
+const array = ['a', 'b', 'c', 'a', 'd', 'c'];
+let sortedArray = array.filter((itm, itr) => array.indexOf(itm) !== itr );
+console.log(sortedArray);
+----------------------------------------------------------
+const array = ['a', 'b', 'c', 'a', 'd', 'c'];
+let sortedArray = [];
+let sortedArray2 = [];
+
+array.forEach(itm => {
+  if(sortedArray.indexOf(itm) === -1)
+    sortedArray.push(itm);
+  else 
+    sortedArray2.push(itm)
+})
+console.log(sortedArray2);
+-------------------------------------------------------------
+const isPrime = (num) => {
+  for(let i = 2; i< num; i++){
+  if(num%i === 0){
+     return false
+  }else{
+    return true;
+   }
+  }
+}
+
+console.log(isPrime(5));
+
