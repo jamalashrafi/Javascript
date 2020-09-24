@@ -66,4 +66,48 @@ const isPrime = (num) => {
 }
 
 console.log(isPrime(5));
+//Custom Css---------------------
+ function replaceChar(origString, replaceChar, index) 
+        { 
+            let newStringArray = origString.split(""); 
+  
+            newStringArray[index] = replaceChar; 
+  
+            let newString = newStringArray.join(""); 
+  
+            return newString; 
+        }
+
+
+
+let string = '{background-color:test1; font-size:12px}';
+//let str = string.split(';');
+let str = string.replace(';', ',');
+let str2 = str.split(',');
+let str3=str2.map((a)=>{
+  let i = a.indexOf('-');
+  let t = a.replace('-', "");
+ // alert(t.charAt(11));
+  //let t1=t.replace(t.charAt(11), t.charAt(11).toUpperCase());
+  let t1 = replaceChar(t, t.charAt(i).toUpperCase(),i);
+  return t1;
+});
+str2.join(',');
+
+console.log(str3.join(','));
+-----------------------------------------
+
+ const handleChange = (event) => {
+    let val = event.target.value;
+    setTemp(val);
+    if (val.includes(';')) {
+      alert(temp);
+      let t = temp;
+    }
+  };
+
+
+
+
+
 
